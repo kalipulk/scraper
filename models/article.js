@@ -8,7 +8,7 @@ let ArticleSchema = new Schema({
     },
     link: {
         type: String, 
-        required, true
+        required: true
     },
     note: {
         type: Schema.Types.ObjectId,

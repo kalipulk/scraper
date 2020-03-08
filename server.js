@@ -19,20 +19,18 @@ mongoose.connect("mongodb://localhost/", {
 });
 
 app.get("/scrape", function (req, res) {
-    axios.get("http://www.newyorker.com/").then(function (response) {
+    axios.get("http://www.reddit.com/").then(function (response) {
         let $ = cheerio.load(response.data);
 
-        // $("article ").each(function (i, element) {
+        $(".SQnoC3ObvgnGjWt90zD9Z").each(function (i, element) {
             let results = {};
-
-            results.title = $(this)
-                .children("a")
-                .text();
-            results.link = $(this)
-                .children("a")
+            console.log($(this).attr("href"));
+            // console.log($(this).find("h3").text());
+            results.title = $(this).find("h3").text();
+            results.link = "https://www.reddit.com" + $(this)
                 .attr("href");
 
-            db.Article.create(result)
+            db.Article.create(results)
                 .then(function (dbArticle) {
                     console.log(dbArticle);
                 })
