@@ -22,7 +22,7 @@ app.get("/scrape", function (req, res) {
     axios.get("http://www.reddit.com/").then(function (response) {
         let $ = cheerio.load(response.data);
 
-        $(".SQnoC3ObvgnGjWt90zD9Z").each(function (i, element) {
+        $(".y8HYJ-y_lTUHkQIc1mdCq _2INHSNB8V5eaWp4P0rY_mE").each(function (i, element) {
             let results = {};
             console.log($(this).attr("href"));
             // console.log($(this).find("h3").text());
