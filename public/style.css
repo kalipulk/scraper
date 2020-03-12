@@ -6,50 +6,53 @@ body {
 }
 
 #wrapper {
-    width: 1050px;
+    width: 1170px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     padding-top: 35px;
     background-color: #ffffff;
     border-radius: 7px;
-    box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 30px #eb8c00;
 }
 
-/* #title-wrapper {
-    text-align: center;
-    background-color: 
-} */
-
 .fa-reddit {
-    color: #24262f;
+    color: #09051e;
 }
 
 #articles {
     display: inline-block;
     overflow: auto;
-    width: 60%;
-    height: 700px;
+    width: 50%;
+    height: 500px;
+    padding: 20px;
 }
 
 #notes {
     float: right;
     width: 30%;
+    padding-left: 30px;
     padding-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 textarea,
 input {
     display: block;
     width: 100%;
-    background-color:#eb8c00;
     border-radius: 7px;
+    border: 1px solid #eb8c00;
     padding: 10px;
+    font-family: 'Sen', sans-serif;
+    margin: 10px;
 }
 
 input {
-    height: 36px;
-    font-size: 24px;
+    height: 20px;
+    font-size: 18px;
     outline: none;
+    
 }
 
 textarea {
@@ -59,8 +62,15 @@ textarea {
 
 button {
     font-family: 'Sen', sans-serif;
+    color: #ffffff;
+    background-color: #24262f;
     font-size: 18px;
     border-radius: 10px;
     box-shadow: #efefef 3px;
     outline: none;
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #25363e;
 }
